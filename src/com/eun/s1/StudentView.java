@@ -9,6 +9,7 @@ public class StudentView {
 	public void view(Student [] students) {
 
 		for(int i=0; i<students.length; i++) {
+
 			System.out.println("학생의 이름 :"+students[i].name);
 			System.out.println("학생의 번호 :"+students[i].num);
 			System.out.println("학생의 국어 :"+students[i].kor);
@@ -17,6 +18,11 @@ public class StudentView {
 			System.out.println("학생의 총점 :"+students[i].total);
 			System.out.println("학생의 평균 :"+students[i].avg);
 		}
+	}
+
+	public void viewStudent() {
+
+	
 	}
 
 }

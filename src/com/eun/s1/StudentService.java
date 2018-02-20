@@ -43,12 +43,31 @@ public class StudentService {
 			students[i].eng=sc.nextInt();
 			System.out.println(students[i].name+"수학 점수 입력: ");
 			students[i].math=sc.nextInt();
-			
+
 			students[i].total =students[i].kor+students[i].eng+students[i].math;
 			students[i].avg=students[i].total/3;
-			
+
 		}
-	
 	}
 
+	//search 메서드명
+	//번호를 입력받아서 학생한명을 찾아서
+	//해당출력은 StudentView class의 viewStudent메서드에서 출력
+	public void search(Student [] students) {
+		System.out.println("학생번호를 입력해주세요:");
+		int num=sc.nextInt();
+		boolean check=true;
+		String name ="";
+		while(check) {
+			for(int i=0; i<students.length; i++) {
+				if(students[i].num==num) {
+					name=students[i].name;
+					check=!check;
+				}else {
+					System.out.println("해당하는 번호가 없습니다.");
+					
+				}
+			}
+		}
+	}
 }

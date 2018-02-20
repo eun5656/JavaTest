@@ -19,6 +19,7 @@ public class SchoolController {
 		Student [] students = null;
 		StudentView view = new StudentView();
 		boolean check = true;
+		int num=0;
 
 		while(check) {
 
@@ -41,6 +42,8 @@ public class SchoolController {
 				break;
 			case 3:
 				System.out.println("성적조회");
+				service.search(students);
+				//view.viewStudent(students, num);
 				break;
 			case 4:
 				System.out.println("전체조회");
