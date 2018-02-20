@@ -23,7 +23,7 @@ public class SchoolController {
 		while(check) {
 
 			System.out.println("1. 학생 등록");
-			System.out.println("2. 학생 입력");
+			System.out.println("2. 성적 입력");
 			System.out.println("3. 학생 조회");
 			System.out.println("4. 전체 조회");
 			System.out.println("5. 프로그램종료");
@@ -37,6 +37,7 @@ public class SchoolController {
 				break;
 			case 2:
 				System.out.println("성적입력");
+				service.addPoint(students);
 				break;
 			case 3:
 				System.out.println("성적조회");
